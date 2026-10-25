@@ -1,4 +1,6 @@
 import useProducts from "../../useProducts";
+import ProductCard from "./ProductCard";
+
 const Shop = () => {
   const { products, loading, error } = useProducts();
   
@@ -10,6 +12,9 @@ const Shop = () => {
   return (
     <div>
       <h1>Shop</h1>
+      {products.map(product => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const ProductCard = ({ product }) => {
+
+const ProductCard = ({ product,addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   const decrement = () => {
@@ -22,8 +23,9 @@ const ProductCard = ({ product }) => {
       <h3>{product.title}</h3>
       <p>${product.price}</p>
       <button onClick={decrement}>-</button>
-      <input type="number" onChange={handleChange} />
+      <input type="number" min="1" value={quantity}  onChange={handleChange} />
       <button onClick={increment}>+</button>
+      <button onClick={() => addToCart(product, quantity)} >Add To Cart</button>
     </div>
   );
 };

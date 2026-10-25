@@ -1,7 +1,7 @@
 import useProducts from "../../useProducts";
 import ProductCard from "./ProductCard";
 
-const Shop = () => {
+const Shop = ({addToCart}) => {
   const { products, loading, error } = useProducts();
   
   if (loading) return <p>Loading...</p>;
@@ -13,7 +13,7 @@ const Shop = () => {
     <div>
       <h1>Shop</h1>
       {products.map(product => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );

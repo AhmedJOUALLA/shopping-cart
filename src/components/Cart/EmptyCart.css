@@ -1,0 +1,23 @@
+.empty-cart {
+  text-align: center;
+  padding: 5rem 1rem;
+  flex: 1;
+}
+
+.empty-cart h2 {
+  margin-bottom: 0.5rem;
+}
+
+.empty-cart p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.empty-btn {
+  display: inline-block;
+  background: var(--text);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+}

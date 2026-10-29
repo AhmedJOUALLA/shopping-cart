@@ -1,0 +1,24 @@
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #2563eb;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

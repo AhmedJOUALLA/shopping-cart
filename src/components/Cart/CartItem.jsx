@@ -9,8 +9,6 @@ const CartItem = ({ item, updateQuantity, removeFromCart }) => {
   }
 
 
-
-
   
   const handleRemove = () => {
     if (window.confirm(`Remove ${item.title} from your cart ? `)) {
@@ -25,8 +23,9 @@ const CartItem = ({ item, updateQuantity, removeFromCart }) => {
     <div>
       <img src={item.image} alt={item.title} width="100" />
       <p>{item.title}</p>
-      <p>{item.price}</p>
+      <p>{item.price.toFixed(2)}</p>
       <p>{item.quantity}</p>
+   
       <button onClick={handleIncrement}>
         +
       </button>

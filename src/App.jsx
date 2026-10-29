@@ -4,7 +4,7 @@ import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
 import { useState } from "react";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -14,7 +14,7 @@ function App() {
 
       if (existing) {
         return prevCart.map((item) =>
-          item.id == product.id
+          item.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
             : item,
         );
@@ -27,7 +27,6 @@ function App() {
     setCart((prevCart) => 
       prevCart.map((item) =>
         item.id == id ? { ...item, quantity: Math.max(1, newQuantity )} : item,
-
       )
     );
   };
@@ -36,9 +35,11 @@ function App() {
 
   const removeFromCart = (id) => {
     setCart(prevCart => 
-      prevCart.filter(item => item.id != id)
+      prevCart.filter(item => item.id !== id)
     )
   }
+
+  
 
   return (
     <>
@@ -56,6 +57,7 @@ function App() {
               removeFromCart={removeFromCart} />}
           />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

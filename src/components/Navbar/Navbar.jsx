@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = ({cart}) => {
-  const totalItems = cart.reduce((total, item) => total + item.quantity , 0)
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0)
+  
   return (
       <nav>
         <Link to="/">Home</Link>
@@ -13,3 +14,4 @@ const Navbar = ({cart}) => {
 };
 
 export default Navbar;
+

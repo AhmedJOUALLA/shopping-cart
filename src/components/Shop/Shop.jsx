@@ -8,7 +8,6 @@ const Shop = ({addToCart}) => {
   if (error) return <p>Something went wrong: {error.message}</p>;
 
   
-  console.log(products)
   return (
     <div>
       <h1>Shop</h1>

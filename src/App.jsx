@@ -26,10 +26,13 @@ function App() {
   const updateQuantity = (id, newQuantity) => {
     setCart((prevCart) => 
       prevCart.map((item) =>
-        item.id == id ? { ...item, quantity: newQuantity } : item,
+        item.id == id ? { ...item, quantity: Math.max(1, newQuantity )} : item,
+
       )
     );
   };
+
+
 
   const removeFromCart = (id) => {
     setCart(prevCart => 

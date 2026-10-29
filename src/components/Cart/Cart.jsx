@@ -9,7 +9,14 @@ const Cart = ({ cart, updateQuantity, removeFromCart }) => {
   return (
     <div>
       {cart.map((item) => {
-        return <p key={item.id}>{item.title}</p>;
+        return (
+          <CartItem
+            key={item.id}
+            item={item}
+            updateQuantity={updateQuantity}
+            removeFromCart={removeFromCart}
+          />
+        );
       })}
     </div>
   );

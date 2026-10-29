@@ -1,0 +1,28 @@
+.shop {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  flex: 1;
+}
+
+.shop h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.message {
+  text-align: center;
+  padding: 4rem 1rem;
+  flex: 1;
+}
